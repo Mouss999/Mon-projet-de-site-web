@@ -1,0 +1,308 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #3e231d 0%, #8b5153 45%, #f3c2d1 100%);
+  color: #412e28;
+  line-height: 1.6;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.conteneur {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+/* Entête */
+header {
+  background: rgba(255,255,255,0.72);
+  padding: 0.8rem 0;
+  top: 0;
+  box-shadow: 0 6px 18px rgba(17,17,17,0.06);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(43,31,24,0.04);
+}
+.entete {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #d68495;
+  letter-spacing: 0.2px;
+}
+header nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+header a {
+  color: #3c2620;
+  text-decoration: none;
+  font-weight: 600;
+}
+header a:hover {
+  color: #bf7485;
+}
+/* Section principale */
+.banniere {
+  background: linear-gradient(135deg, rgba(92,41,35,0.96), rgba(182,106,117,0.95), rgba(244,193,209,0.97));
+  color: #fff7f8;
+  padding: 4rem 1rem 3rem;
+}
+.conteneur-banniere {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.contenu-banniere {
+  max-width: 520px;
+  text-align: left;
+}
+.banniere h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  line-height: 1.05;
+}
+.banniere p {
+  margin: 1.2rem 0 1.8rem;
+  font-size: 1.05rem;
+  opacity: 0.95;
+  max-width: 46rem;
+}
+.image-banniere {
+  width: min(100%, 480px);
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+  border: 4px solid rgba(255, 255, 255, 0.24);
+}
+.bouton {
+  display: inline-block;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  background: #b05868;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 22px rgba(176,86,101,0.22);
+}
+.bouton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(176,86,101,0.28);
+}
+.actions-banniere {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+main {
+  padding: 3rem 0 4rem;
+}
+h2 {
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+  font-size: 2rem;
+}
+.texte-gris {
+  margin: 0;
+  color: #fdfcfb;
+  max-width: 660px;
+}
+.grille {
+  display: grid;
+  gap: 1.5rem;
+}
+.grille-menu {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.8rem;
+}
+.grille-contact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.8rem;
+}
+.plat {
+  position: relative;
+  background: linear-gradient(180deg, #fff5f8 0%, #f5d8e1 55%, #f0d0d8 100%);
+  border: 1px solid rgba(139, 61, 74, 0.14);
+  border-radius: 22px;
+  padding: 1.8rem;
+  overflow: hidden;
+  box-shadow: 0 22px 38px rgba(115, 56, 63, 0.12);
+}
+.petit-plat {
+  padding: 1.4rem;
+}
+.plat h3 {
+  margin-top: 0;
+  color: #7b2f3f;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.35);
+}
+.plat:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 26px 48px rgba(115, 56, 63, 0.18);
+  border-color: rgba(139,61,74,0.24);
+}
+.plat p {
+  margin: 0.9rem 0 0;
+  color: #653f44;
+  line-height: 1.75;
+}
+.image-plat {
+  width: 100%;
+  height: 180px;
+  border-radius: 18px;
+  margin-bottom: 0.9rem;
+  object-fit: cover;
+  border: 1px solid rgba(139, 61, 74, 0.12);
+  box-shadow: 0 16px 28px rgba(115, 56, 63, 0.10);
+}
+.plat{
+  border-radius: 22px;
+}
+.apropos {
+  background: rgba(251, 228, 235, 0.92);
+  border: 1px solid rgba(139,61,74,0.16);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-top: 2.5rem;
+}
+.apropos p {
+  margin: 0;
+  color: #6b4d49;
+  font-size: 1.05rem;
+}
+.grille-apropos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.carte-apropos {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 1rem;
+  text-align: center;
+}
+.contact {
+  background: rgba(255, 236, 240, 0.95);
+  border: 1px solid rgba(139,61,74,0.16);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-top: 2.5rem;
+}
+.actions-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.carte-contact {
+  background: #ffffff;
+  border: 1px solid rgba(212,175,55,0.06);
+  border-radius: 16px;
+  padding: 1.6rem;
+  box-shadow: 0 12px 28px rgba(21,21,21,0.05);
+}
+.carte-contact:hover {
+  box-shadow: 0 26px 64px rgba(21,21,21,0.09);
+}
+.entete-contact {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1rem;
+}
+.contact-icone {
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(184,83,98,0.16);
+  font-size: 1.4rem;
+  color: #8b3f4c;
+}
+.bloc-contact {
+  margin-top: 1.5rem;
+  padding: 1.8rem;
+  background: rgba(255, 239, 244, 0.95);
+  border: 1px solid rgba(139,61,74,0.08);
+  border-radius: 18px;
+}
+.bloc-contact h3 {
+  margin-top: 0;
+}
+.image-chef {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 1rem;
+}
+.bloc-apropos {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(255, 239, 244, 0.95);
+  border: 1px solid rgba(139,61,74,0.08);
+  border-radius: 18px;
+}
+.bloc-apropos h3 {
+  margin-top: 0;
+}
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  color: #fff9f3;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  background: linear-gradient(135deg, rgba(178,92,106,0.95), rgba(69,32,27,0.95));
+}
+.carte-contact{
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(246,240,232,0.7));
+}
+h2::after{
+  display: block;
+  height: 6px;
+  width: 80px;
+  margin-top: 10px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, rgba(182,106,117,0.95), rgba(131,50,56,0.9));
+}
+header nav a{
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: background 160ms ease, color 160ms ease;
+}
+header nav a:focus, header nav a:hover{
+  background: rgba(182,106,117,0.12);
+}
+/* Responsive */
+@media (max-width: 860px) {
+  .grille-menu,
+  .grille-contact {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 680px) {
+  .banniere {
+    padding: 4rem 1rem 3rem;
+  }
+  .grille-menu,
+  .grille-contact {
+    grid-template-columns: 1fr;
+  }
+}
